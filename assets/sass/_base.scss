@@ -1,0 +1,64 @@
+/* ============ GOOGLE FONTS =============*/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* ============ VARIABLES ================*/
+
+/* ============ Colors ==============*/
+$primary-cyan: hsl(185, 75%, 39%);
+$primary-blue: hsl(229, 23%, 23%);
+$primary-gray: hsl(227, 10%, 46%);
+$neutral-gray: hsl(0, 0%, 59%);
+
+/* ============ Font Weights ===========*/
+$regular-weight: 400;
+$bold-weight: 700;
+
+/* ============ Font Sizes =============*/
+$normal-size: 18px;
+
+/* ============ BASE ==============*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-cyan;
+  background-image: url(/assets/images/bg-pattern-top.svg),
+    url(/assets/images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -35em left -50em, bottom -35em right -50em;
+}
+
+h2 {
+  font-size: $normal-size;
+  font-weight: $bold-weight;
+  color: rgba(#000, 0.8);
+}
+
+p {
+  font-weight: $regular-weight;
+}
+
+footer {
+  height: 10vh;
+}
+
+/* ============ MIXINGS ==========*/
+
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin flex-container($main, $cross, $wrap) {
+  display: flex;
+  justify-content: $main;
+  align-items: $cross;
+  flex-wrap: $wrap;
+}

@@ -1,0 +1,91 @@
+@use "base" as b;
+
+/*======================= CARD ==================*/
+.card {
+  max-width: 330px;
+  margin: 0 auto;
+  @include b.flex-container(center, center, nowrap);
+  flex-direction: column;
+  @include b.vertical-center;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: #fff;
+  border-radius: 0.75rem;
+
+  &__bg {
+    width: 100%;
+    margin-bottom: -3rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    &-img {
+      border-radius: 100%;
+      outline: 0.3rem solid #fff;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    span {
+      color: b.$primary-gray;
+      font-weight: b.$regular-weight;
+      padding: 0.3rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: b.$primary-gray;
+    }
+  }
+
+  &__info {
+    @include b.flex-container(space-around, center, nowrap);
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid rgba(b.$neutral-gray, 0.1);
+
+    &-item {
+      margin: 0.5rem 0;
+
+      p {
+        padding: 0.25rem;
+        color: b.$primary-gray;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+      }
+
+      flex: 1 1 33%;
+    }
+  }
+}
+
+/*================== FOOTER ==================*/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+/*================== MEDIA QUERIES ================*/
+
+@media screen and (min-width: 790px) and (max-width: 1000px) {
+  body {
+    background-position: top -35em left -35em, bottom -35em right -35em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-position: top -35em left -30em, bottom -32em right -30em;
+  }
+}
