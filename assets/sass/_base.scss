@@ -28,8 +28,8 @@ $normal-size: 18px;
 
 body {
   background-color: $primary-cyan;
-  background-image: url(/assets/images/bg-pattern-top.svg),
-    url(/assets/images/bg-pattern-bottom.svg);
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: top -35em left -50em, bottom -35em right -50em;
 }
